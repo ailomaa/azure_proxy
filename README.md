@@ -13,12 +13,6 @@ API_KEY=          # Bearer token clients must supply (see below)
 SECRET_KEY_BASE=  # Phoenix secret — generate with: openssl rand -base64 64
 ```
 
-### Generating an API key
-
-```bash
-openssl rand -base64 32
-```
-
 ## Running
 
 ```bash
@@ -34,7 +28,7 @@ The server listens on `localhost:4000` by default. Change `PORT` in `.env` to us
 Returns an Azure ASR/TTS token. Requires a bearer token in the `Authorization` header.
 
 ```bash
-curl http://localhost:4000/api/token \
+curl https://DOMAINNAME:4000/api/token \
   -H "Authorization: Bearer <your-api-key>"
 ```
 
