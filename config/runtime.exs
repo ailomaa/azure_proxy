@@ -28,6 +28,13 @@ config :azure_proxy,
          """)
 
 config :azure_proxy,
+       :api_key,
+       System.get_env("API_KEY") ||
+         raise("""
+         environment variable API_KEY is missing.
+         """)
+
+config :azure_proxy,
        :azure_region,
        System.get_env("AZURE_REGION") ||
          raise("""

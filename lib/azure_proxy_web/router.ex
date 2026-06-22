@@ -3,6 +3,7 @@ defmodule AzureProxyWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug AzureProxyWeb.Plugs.ApiKeyAuth
   end
 
   scope "/api", AzureProxyWeb do
